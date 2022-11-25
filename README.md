@@ -18,9 +18,9 @@ No installation required to use the password generator, just visit https://rache
 
 To use the password generator, click 'Generate Password' button and a series of prompt and confirm options appear. Based on the users selections the input is validated and the selection is generated into a password that is displayed on the page. Copy and paste password to use it in your accounts.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
 
-![alt text](assets/images/screenshot.png)
+![Password Generator prompts](./Images/PasswordGenerator_01.jpg)
+![Completed Password Generated](./Images/PasswordGenerator_02.png)
 
 ## Credits
 
