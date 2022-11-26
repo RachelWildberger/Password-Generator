@@ -29,18 +29,18 @@ function getPasswordOptions() {
   var passwordUpperCase = confirm("Do you want to include uppercase characters in your password?");
   var passwordLowerCase = confirm("Do you want to include lowercase characters in your password?");
 
-  // 
+  // storing values of prompts that will be generated into password function
   var options = {
     passwordLength: passwordLength,
     passwordNumbers: passwordNumbers,
     passwordSymbols: passwordSymbols,
-    passwordupperCase: passwordUpperCase,
-    passwordlowerCase: passwordLowerCase,
+    passwordUpperCase: passwordUpperCase,
+    passwordLowerCase: passwordLowerCase,
   };
   return options;
 }
 
-// using Math.floor(Math.random()
+// using Math.floor(Math.random() to get random index for arrays
 function createRandom(length) {
   var randomNumber = Math.floor(Math.random() * length);
   return randomNumber;
@@ -51,21 +51,21 @@ function createRandom(length) {
 function generatePassword() {
   var password = getPasswordOptions();
   var availableChars = [];
-  var passwordArray = [];
-  if(password.passwordLength) {
-    availableChars = availableChars.concat(symbols)
-  } if(password.passwordLength) {
+  var passwordArr = [];
+  if(password.passwordNumbers) {
     availableChars = availableChars.concat(numbers)
-  } if(password.passwordLength) {
+  } if(password.passwordSymbols) {
+    availableChars = availableChars.concat(symbols)
+  } if(password.passwordUpperCase) {
     availableChars = availableChars.concat(upperCase)
-  } if(password.passwordLength) {
+  } if(password.passwordLowerCase) {
     availableChars = availableChars.concat(lowerCase)
   }
  
  // Loops through all character types and selects random characters each time
  for(var i = 0; i < password.passwordLength; i ++) {
-  passwordArray.push(availableChars[createRandom(availableChars.length)])
+  passwordArr.push(availableChars[createRandom(availableChars.length)])
  }
-  return passwordArray.join("")
+  return passwordArr.join("")
 
 }
